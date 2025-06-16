@@ -1,0 +1,21 @@
+<div class="mascotas-container">
+  <div class="card" *ngFor="let mascota of mascotas">
+    <img [src]="mascota.imagen" [alt]="mascota.tipo" (click)="toggleInfo(mascota)" />
+    <h2>{{ mascota.tipo }}</h2>
+
+    <div class="info" *ngIf="mascota.mostrarInfo">
+      <button class="close-btn" title="Cerrar" (click)="toggleInfo(mascota)">&times;</button>
+      <p><strong>Descripción:</strong> {{ mascota.descripcion }}</p>
+      <p><strong>Edad promedio:</strong> {{ mascota.edad }}</p>
+      <p><strong>Tamaño:</strong> {{ mascota.tamaño }}</p>
+      <p><strong>Alimentación:</strong> {{ mascota.alimentacion }}</p>
+      <p><strong>Características:</strong> {{ mascota.caracteristicas }}</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
